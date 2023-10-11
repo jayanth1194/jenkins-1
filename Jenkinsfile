@@ -7,7 +7,7 @@ pipeline {
                 sh '''
                  pwd
                  ls -lart
-                 mdir jayant
+                 mkdir jayant
 
                 '''
             }
