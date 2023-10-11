@@ -6,7 +6,7 @@ pipeline {
                 echo "stage1"
                 sh '''
                  pwd
-                 ls -lart
+                 ls -lar
                  mkdir jayant
 
                 '''
