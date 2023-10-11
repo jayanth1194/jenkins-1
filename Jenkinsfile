@@ -17,4 +17,15 @@ pipeline {
             }
         }
     }
+    post {
+        always{
+            echo "after stage only, it will work"
+        }
+        success{
+            echo "it will for sucess"
+        }
+        failure {
+            echo " it will work for failure"
+        }
+    }
 }
