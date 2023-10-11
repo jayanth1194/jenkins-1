@@ -4,7 +4,12 @@ pipeline {
         stage('Build') { 
             steps {
                 echo "stage1"
-                sh 'pwd'
+                sh '''
+                 pwd
+                 ls -lart
+                 mdir jayant
+
+                '''
             }
         }
         stage('Test') { 
