@@ -1,32 +1,34 @@
 pipeline {
     agent any 
     stages {
-        stage('Build') { 
+        stage('init') { 
             steps {
-                echo "stage1"
                 sh '''
-                 pwd
-                 ls -lar
-                 mkdir jayant
+                pwd
+                ls -lart
+                terraform init
 
                 '''
             }
         }
-        stage('Test') { 
+        stage('plan') { 
             steps {
-                echo "stage2"
+              sh '''
+               terraform plan
+               '''
             }
         }
-        stage('Deploy') { 
+        stage('Apply') { 
             steps {
-                echo "stage3"
+                sh '''
+                terraform apply '''
             }
         }
     }
+
+    
     post {
-        always{
-            echo "after stage only, it will work"
-        }
+       
         success{
             echo "it will for sucess"
         }
