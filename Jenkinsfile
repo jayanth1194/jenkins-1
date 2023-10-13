@@ -5,6 +5,7 @@ pipeline {
             steps {
                 sh '''
                 pwd
+                cd /var/lib/jenkins/workspace/time
                 ls -lart
                 terraform init
 
@@ -14,6 +15,7 @@ pipeline {
         stage('plan') { 
             steps {
               sh '''
+              
                terraform plan
                '''
             }
@@ -21,6 +23,7 @@ pipeline {
         stage('Apply') { 
             steps {
                 sh '''
+             
                 terraform apply '''
             }
         }
