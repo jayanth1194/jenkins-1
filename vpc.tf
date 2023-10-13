@@ -6,4 +6,4 @@ resource "aws_vpc" "main" {
     Name ="jenkins-terra"
   }
  
-
+}
