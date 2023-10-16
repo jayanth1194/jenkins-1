@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh '''
                 pwd
-                cd /var/lib/jenkins/workspace/time
+                
                 ls -lart
                 terraform init
 
