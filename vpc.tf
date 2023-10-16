@@ -3,7 +3,7 @@ resource "aws_vpc" "main" {
   
 
   tags = {
-    Name ="jenkins-terraform."
+    Name ="jenkins-terraform.."
   }
  
 }
